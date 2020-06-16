@@ -57,6 +57,9 @@ public class ShoppingCartController {
         return "/exam06/item-and-cart";
     }
 
+
+
+
     @RequestMapping("/in-cart/{index}")
     public String inCart(@PathVariable ("index") String index,Model model) {
         List<Item> inCartList;
