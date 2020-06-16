@@ -2,7 +2,7 @@ package com.example.domain;
 
 public class User {
     private String name;
-    private Integer age;
+    private String age;
     private String comment;
 
     public String getName() {
@@ -13,11 +13,11 @@ public class User {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 

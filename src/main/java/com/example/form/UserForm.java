@@ -9,7 +9,7 @@ public class UserForm {
 
     @NotBlank(message = "年齢が空欄です")
     @Pattern(regexp = "[0-9]+")
-    private Integer age;
+    private String age;
 
     @NotBlank(message = "コメントが空欄です")
     private String comment;
@@ -24,11 +24,11 @@ public class UserForm {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
