@@ -12,16 +12,16 @@
                 <div th:each="item,index:${application.itemList}">
                     <span th:text="${item.name}"></span>
                     <span th:text="${item.price}"></span>円
-                    <a th:href="@{/ex06/in-cart/{index}(index=${index.index})}" class="btn btn-default">カートへ</a>
+                    <a th:href="@{/ex06/in-cart/{index}(index=${index.index})}" class="btn btn-success">カートへ</a>
                 </div>
             </div>
             <div class="col-6">
             <div th:each="item,index:${session.inCartList}">
                 <span th:text="${item.name}"></span>
                 <span th:text="${item.price}"></span>円
-                <a th:href="@{/ex06/delete/{index}(index=${index.index})}" class="btn btn-default">削除</a>
+                <a th:href="@{/ex06/delete/{index}(index=${index.index})}" class="btn btn-success">削除</a>
             </div>
-
+                <div th:text="${#numbers.formatInteger(sumPrice,1,'COMMA')}">円</div>円
             </div>
         </div>
     </div>
