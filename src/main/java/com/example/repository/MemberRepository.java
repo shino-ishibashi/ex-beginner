@@ -27,7 +27,7 @@ public class MemberRepository {
     private NamedParameterJdbcTemplate template;
 
     public List<Member> findByPartOfName(String partOfName) {
-        String sql = "select id,name,age,dep_id from members where name like :partOfName";
+        String sql = "select id,name,age,dep_id from members where name like :partOfName order by age";
         String partOfNameQuery = "%" + partOfName + "%";
         SqlParameterSource param = new MapSqlParameterSource().addValue("partOfName",partOfNameQuery);
 
