@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/ex03/sum-price}" th:object="${exam03Form}">
+        <label>商品1</label><input type="text" th:field="*{product1Price}"><br>
+        <label>商品2</label><input type="text" th:field="*{product2Price}"><br>
+        <label>商品3</label><input type="text" th:field="*{product3Price}"><br>
+        <button>購入</button>
+    </form>
+</body>
+</html>
