@@ -28,6 +28,7 @@ public class MemberRepository {
 
     public List<Member> findByPartOfName(String partOfName) {
         String sql = "select id,name,age,dep_id from members where name like :partOfName order by age";
+        // SETECT * ではresult set に入らない
         String partOfNameQuery = "%" + partOfName + "%";
         SqlParameterSource param = new MapSqlParameterSource().addValue("partOfName",partOfNameQuery);
 
